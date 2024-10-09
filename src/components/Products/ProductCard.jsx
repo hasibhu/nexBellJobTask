@@ -18,12 +18,14 @@ const ProductCard = ({product}) => {
             {/* product info part  */}
             <div className="p-4 flex-grow">
                 <h3 className="text-lg font-semibold cursor-pointer hover:underline text-center">
-                    {title}
+                    {title.slice(0,15)}...
                 </h3>
 
                 <p className="text-sm  line-clamp-3 min-h-[55px] text-gray-500">
-                    {description}
+                    {description.slice(0, 120)}
+                    
                 </p>
+                
                 <p className="mt-2 text-xl font-bold"><span className="text-3xl">$</span>{price}</p>
                 
             </div>
@@ -39,12 +41,7 @@ const ProductCard = ({product}) => {
                     >
                         <FaHeart className="text-red-500" />
                     </button>
-                    {/* <button
-                        aria-label="View product"
-                        className="flex items-center justify-center w-10 h-10 bg-white border border-gray-300 rounded-full shadow hover:bg-blue-100 transition-transform transform hover:scale-110"
-                    >
-                        <FaEye />
-                    </button> */}
+                   
                 </div>
             </div>
 
