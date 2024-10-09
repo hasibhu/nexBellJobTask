@@ -7,7 +7,7 @@ import Error from "../pages/Error";
 import Dashboard from "../pages/Dashboard";
 import AddProduct from "../Dashboard/AddProduct";
 
-
+import {loader as productsLoader } from '../pages/Products'
 
 
 const router = createBrowserRouter([
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
                 path: '/products',
                 element: <Products></Products>,
                 errorElement: <ErrorPage></ErrorPage>,
-                // loader: productsLoader
+                loader: productsLoader
             },
         ]
     },
