@@ -1,7 +1,7 @@
 # DailyShop
 
 ## Featured Products:
-#### the featured products have been selected randomly from all products those will render each time the homepage will be refreshed.
+ The featured products have been selected randomly from all products those will render each time the homepage will be refreshed.
 
 ## Products Page
 #### 
