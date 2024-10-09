@@ -1,7 +1,10 @@
 # DailyShop
 
 ## Featured Products:
-### the featured has been selected randomly from all products those will render each time the homepage will be refreshed.
+#### the featured products have been selected randomly from all products those will render each time the homepage will be refreshed.
+
+## Products Page
+#### 
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
