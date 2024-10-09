@@ -25,7 +25,7 @@ const FeaturedProducts = () => {
     return (
         <div>
             <h2 className='text-4xl text-center p-10 font-bold'>Featured Products</h2>
-             <div className='grid grid-cols-3 gap-3'>
+             <div className='grid lg:grid-cols-3 gap-3'>
                 
                 {featuredProducts.map(product => <ProductCard key={product.id} product={product}></ProductCard>)}
             </div>

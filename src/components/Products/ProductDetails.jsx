@@ -24,7 +24,7 @@ const ProductDetails = () => {
     console.log(product);
 
     return (
-        <section className="mt-5 p-4 mx-auto ">
+        <section className="mt-5 p-4 mx-auto pt-24">
             <div className="max-w-screen-xl px-4 mx-auto">
                 <div className="flex flex-col md:flex-row gap-4 lg:gap-8 xl:gap-16">
                     <div className="shrink-0 max-w-md lg:max-w-lg mx-auto bg-green-50">
