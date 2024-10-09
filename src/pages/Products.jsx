@@ -56,7 +56,7 @@ export const loader = async ({ request }) => {
 
 const Products = () => {
     return (
-        <div className="h-screen mt-8">
+        <div className="h-screen pt-28 bg-blue-300 rounded-md">
             <Filters />
             <ProductGrid />
         </div>
