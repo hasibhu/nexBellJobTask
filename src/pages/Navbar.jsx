@@ -28,13 +28,14 @@ const Navbar = () => {
                     <li> <Link to={'/products'}>Products</Link> </li>
                 </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">DailyShop</a>
+                <a className="btn btn-ghost text-xl"> <Link to={'/'}>DailyShop</Link> </a>
+                
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                <li> <Link to={'/'}>Home</Link> </li>
-                <li> <Link to={'/products'}>Products</Link> </li>
-                <li> <Link to={'/dashboard/addproduct'}>Dashboard</Link> </li>
+                <li> <Link to={'/'} className='text-xl'>Home</Link> </li>
+                <li> <Link to={'/products'} className='text-xl'>Products</Link> </li>
+                <li> <Link to={'/dashboard/addproduct'} className='text-xl'>Dashboard</Link> </li>
                
                
                 </ul>

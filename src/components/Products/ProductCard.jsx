@@ -2,11 +2,21 @@
 import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 
 const ProductCard = ({product}) => {
-    const { id, title, images, price, rating, description } = product;
+    const { id, title, images, price, rating, description, brand, category } = product;
     
+     const handleClick = () => {
+        Swal.fire({
+            title: "Added to wishlist successfully!!",
+            timer: 2000, // Close after 2 seconds (2000 ms)
+            showConfirmButton: false,
+            icon: "success"
+        });
+
+    };
 
     return (
         <div className=" p-3 w-full bg-white border border-gray-200 rounded-lg  transform transition duration-300 hover:scale-105 hover:shadow-xl flex flex-col shadow-lg">
@@ -26,7 +36,19 @@ const ProductCard = ({product}) => {
                     
                 </p>
                 
-                <p className="mt-2 text-xl font-bold"><span className="text-3xl">$</span>{price}</p>
+                    <p className="mt-2 text-xl font-bold"><span className="text-3xl">$</span>{price}</p>
+                <div className="flex  justify-between items-center">
+                    <div className="flex pt-3 gap-3">
+                        <p className="flex flex-row">Brand:</p>
+                        <p>{ brand}</p>
+                     </div>
+                </div>
+                <div className="flex  justify-between items-center">
+                    <div className="flex pt-3 gap-3">
+                        <p className="flex flex-row">Category:</p>
+                        <p>{ category}</p>
+                     </div>
+                </div>
                 
             </div>
              {/* icons and Ratings part */}
@@ -39,7 +61,8 @@ const ProductCard = ({product}) => {
                         aria-label="Add to wishlist"
                         className="flex items-center justify-center w-10 h-10 bg-white border border-gray-300 rounded-full shadow-md hover:bg-red-100 transition-transform transform hover:scale-110"
                     >
-                        <FaHeart className="text-red-500" />
+                        
+                        <button onClick={handleClick}> <FaHeart  className="text-red-500" /></button>
                     </button>
                    
                 </div>

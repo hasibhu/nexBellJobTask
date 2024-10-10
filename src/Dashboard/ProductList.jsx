@@ -15,7 +15,7 @@ export const loader = async () => {
     } catch (error) {
         console.error("Error fetching products:", error);
         throw error; 
-    }
+    }       
 };
 
 const ProductList = () => {
