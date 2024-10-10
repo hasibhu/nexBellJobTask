@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, createHashRouter } from "react-router-dom";
 import MainLayout from "../pages/MainLayout";
 import Landing from "../pages/Landing";
 import ErrorPage from "../pages/ErrorPage";
@@ -12,7 +12,7 @@ import {loader as landingLoader } from '../pages/Products'
 
 
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: '/',
         element: <MainLayout></MainLayout>,
