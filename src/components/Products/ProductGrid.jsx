@@ -2,11 +2,11 @@
 import { useLoaderData } from 'react-router-dom';
 import ProductCard from './ProductCard';
 import notFound from '../../../public/notFound.jpg'
+
+
 const ProductGrid = () => {
     const { products } = useLoaderData();
 
-    // Debugging: Ensure filtered products are being received
-    console.log("Filtered Products in Grid:", products);
 
     if (!products || products.length === 0) {
         return <div >

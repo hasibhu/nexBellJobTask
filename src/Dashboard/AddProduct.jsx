@@ -50,7 +50,7 @@ const AddProduct = () => {
     };
 
     return (
-        <div className='mb-10 border-4 border-blue-500 p-6 rounded-xl'>
+        <div className='mb-10 border-2 ml-1 border-blue-500 p-6 rounded-xl'>
             <h1 className='border-b-4 text-center text-4xl'>Add New Product Here</h1>
 
             <Form>

@@ -31,7 +31,7 @@ const UpdateProduct = () => {
     };
 
     return (
-        <div>
+        <div className="mb-5">
             <h2 className="text-4xl font-bold text-center border-b-4 pb-3">Update Product</h2>
             <Form className="mt-4 ml-1 border-2 border-green-300 p-6">
                 <div className="mb-4">

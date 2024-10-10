@@ -20,7 +20,7 @@ export const loader = async () => {
 
 const ProductList = () => {
     return (
-        <div>
+        <div className="ml-2">
             <h1 className="text-3xl font-bold text-center border-b-4 m-4 pb-4">All Listed Products</h1>
            <ProductListTable></ProductListTable>
         </div>

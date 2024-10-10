@@ -1,5 +1,4 @@
 
-// this one works for reset realtime 
 
 
 import { Form, useLoaderData, useSearchParams } from 'react-router-dom';
@@ -12,7 +11,7 @@ const Filters = () => {
     
     // Initialize search params
     const [searchParams, setSearchParams] = useSearchParams();
-
+    const [search, setSearch]= useState('')
     // Add "all" as the default option for category and brand selection
     const categoryOptions = ['all', ...categories];
     const brandOptions = ['all', ...brands];
@@ -23,10 +22,9 @@ const Filters = () => {
     // Use a ref to access the form
     const formRef = useRef(null);
 
-    // Local state for selected sort option
     const [sort, setSort] = useState(searchParams.get('sort') || 'any');
 
-    // Reset form fields
+   
     const handleReset = () => {
         if (formRef.current) {
             formRef.current.reset();
@@ -34,7 +32,6 @@ const Filters = () => {
         setSearchParams({ sort: 'any' });
     };
 
-    // Handle sort change in real-time
     const handleSortChange = (e) => {
         const newSort = e.target.value;
         setSort(newSort);
@@ -46,6 +43,19 @@ const Filters = () => {
         });
     };
 
+    // Handle sort change in real-time
+    const searchOnChange = (e) => {
+        const newSearch = e.target.value;
+        setSearch(newSearch);
+        setSearchParams(newSearch);
+
+        // Update search params without form submission
+        setSearchParams(prev => {
+            const newParams = { ...Object.fromEntries(prev.entries()), search: newSearch };
+            return newParams;
+        });
+    };
+
     return (
         <Form 
             className="bg-gray-300 rounded-md px-8 py-4 gap-x-4 gap-y-8"
@@ -53,7 +63,8 @@ const Filters = () => {
         >
             <div className=''>
                 <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 justify-around space-x-2 items-center'>
-                    <FormInput type="Search" label="Search Products" name="search" size="input-sm" />
+                    {/* search form  */}
+                    <FormInput type="Search" label="Search Products" value={search} onChange={ searchOnChange} name="search" size="input-sm" />
 
                     {/* Brand Selection */}
                     <FormSelect label="Select Brand" name="brand" list={brandOptions} size="select-sm" />
@@ -67,8 +78,8 @@ const Filters = () => {
                         name="sort" 
                         list={sortOptions} 
                         size="select-sm" 
-                        value={sort} // Bind sort to state
-                        onChange={handleSortChange} // Real-time sorting change
+                        value={sort}
+                        onChange={handleSortChange} 
                     />
                 </div>
                 <div className='flex justify-center mt-10 gap-10'>
