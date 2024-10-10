@@ -11,6 +11,7 @@ import {loader as productListLoader } from '../Dashboard/ProductList'
 import Dashboard from "../Dashboard/Dashboard";
 import AddProduct from "../Dashboard/AddProduct";
 import ProductList from "../Dashboard/ProductList";
+import UpdateProduct from "../Dashboard/UpdateProduct";
 
 
 
@@ -54,6 +55,12 @@ const router = createHashRouter([
                 element: <ProductList></ProductList>,
                 loader: productListLoader
             },
+            {
+                path: 'update/:id', // Corrected path
+                element: <UpdateProduct />,
+                errorElement: <ErrorPage />, 
+                loader: singleProductLoader
+            }
         ]
     }
 ])

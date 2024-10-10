@@ -4,18 +4,18 @@ import TableRow from './TableRow';
 
 const ProductListTable = () => {
     const { products } = useLoaderData()
-    console.log(products);
+    // console.log(products);
     return (
         <div>
             <div className="overflow-x-auto">
   <table className="table">
     {/* head */}
     <thead>
-      <tr className='text-center'>
+      <tr className='text-center border'>
        
-        <th>Image and Brand</th>
-        <th>Title</th>
-        <th >Actions</th>
+        <th className='border'>Image and Brand</th>
+        <th className='border'>Title</th>
+        <th className='border' >Actions</th>
         
       </tr>
     </thead>

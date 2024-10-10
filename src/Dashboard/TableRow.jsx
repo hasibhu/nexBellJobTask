@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const TableRow = ({ data }) => {
-    console.log(data);
-    const { images, title, brand } = data;
+    // console.log(data);
+    const { id, images, title, brand } = data;
 
 
     const handleDelete = () => [
@@ -52,7 +53,8 @@ const TableRow = ({ data }) => {
         
         
                 <td>
-                    <button className="btn bg-blue-500">Update</button>
+                    <Link to={`/dashboard/update/${id}`}> <button className="btn bg-blue-500">Update</button></Link>
+                   
                     <button  onClick={handleDelete} className="btn bg-red-600 ">Delete</button>
                 </td>
         
