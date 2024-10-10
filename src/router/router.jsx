@@ -7,6 +7,9 @@ import Error from "../pages/Error";
 import ProductDetails, { singleProductLoader } from "../components/Products/ProductDetails";
 import {loader as productsLoader } from '../pages/Products'
 import {loader as landingLoader } from '../pages/Products'
+import Dashboard from "../Dashboard/Dashboard";
+import AddProduct from "../Dashboard/AddProduct";
+import ProductList from "../Dashboard/ProductList";
 
 
 
@@ -34,6 +37,22 @@ const router = createHashRouter([
                 errorElement: <ErrorPage />, 
                 loader: singleProductLoader
             }
+        ]
+    },
+    {
+        path: 'dashboard',
+        element: <Dashboard></Dashboard>,
+        children: [
+            {
+                path: 'addProduct',
+                element: <AddProduct></AddProduct>
+
+            },
+            {
+                path: 'productList',
+                element: <ProductList></ProductList>
+
+            },
         ]
     }
 ])

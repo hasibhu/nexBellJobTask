@@ -1,23 +1,19 @@
 
 
-const FormInput = ({label, name, type, defaultValue, size, height}) => {
+const Descriptioninput = ({label, name, type, defaultValue, size = "w-full", height = "h-20"}) => {
     return (
-        <label className="form-control w-full max-w-xs">
+        <label className={`form-control ${size}`}>
             <div className="label">
                 <span className="label-text font-bold">{label}</span>
-            
             </div>
             <input
                 type={type}
                 name={name}
                 defaultValue={defaultValue}
                 placeholder="Write Here"
-                className={`input input-bordered h-${height}  ${size}`} />
-           
+                className={`input input-bordered ${height}`} />
         </label>
     );
 };
 
-
-
-export default FormInput;
+export default Descriptioninput;
