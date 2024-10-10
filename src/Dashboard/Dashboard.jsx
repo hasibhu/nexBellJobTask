@@ -25,7 +25,7 @@ const Dashboard = () => {
 
 
 
-                <div className='lg:mt-28 mt-5'>
+                <div className='lg:mt-28 mt-5 border-t-4 border-green-600 pt-20'>
                     <Link to={'/'} className='flex flex-row justify-center items-center gap-5 text-2xl bg-green-200 rounded-xl p-2'>
                          <IoHome />Home
                     </Link>
