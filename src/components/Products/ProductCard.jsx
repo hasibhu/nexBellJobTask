@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
-import { FaEye } from "react-icons/fa";
 import Swal from "sweetalert2";
 
 
@@ -38,13 +37,13 @@ const ProductCard = ({product}) => {
                 
                     <p className="mt-2 text-xl font-bold"><span className="text-3xl">$</span>{price}</p>
                 <div className="flex  justify-between items-center">
-                    <div className="flex pt-3 gap-3">
+                    <div className="flex gap-3">
                         <p className="flex flex-row">Brand:</p>
                         <p>{ brand}</p>
                      </div>
                 </div>
                 <div className="flex  justify-between items-center">
-                    <div className="flex pt-3 gap-3">
+                    <div className="flex gap-3">
                         <p className="flex flex-row">Category:</p>
                         <p>{ category}</p>
                      </div>
