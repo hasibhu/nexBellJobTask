@@ -6,7 +6,7 @@ const Dashboard = () => {
     return (
          <div className="lg:flex mt-8 border-t-4 border-yellow-500 rounded-xl pt-3  ">
            
-            <div className="lg:w-64  pt-24 items-center flex flex-col bg-amber-400 border-r-4 h-screen rounded-xl">
+            <div className="lg:w-64  pt-24 items-center flex flex-col bg-amber-400 border-r-4 lg:h-screen rounded-xl">
                 <Link to={'addProduct'}>
                     Add product
                 </Link>
@@ -17,7 +17,7 @@ const Dashboard = () => {
 
 
 
-                <div className='mt-28'>
+                <div className='lg:mt-28'>
                 <Link to={'/'}>Home</Link>
                 </div>
             </div>

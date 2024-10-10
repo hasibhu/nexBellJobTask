@@ -7,6 +7,7 @@ import Error from "../pages/Error";
 import ProductDetails, { singleProductLoader } from "../components/Products/ProductDetails";
 import {loader as productsLoader } from '../pages/Products'
 import {loader as landingLoader } from '../pages/Products'
+import {loader as productListLoader } from '../Dashboard/ProductList'
 import Dashboard from "../Dashboard/Dashboard";
 import AddProduct from "../Dashboard/AddProduct";
 import ProductList from "../Dashboard/ProductList";
@@ -40,7 +41,7 @@ const router = createHashRouter([
         ]
     },
     {
-        path: 'dashboard',
+        path: 'dashboard/',
         element: <Dashboard></Dashboard>,
         children: [
             {
@@ -50,8 +51,8 @@ const router = createHashRouter([
             },
             {
                 path: 'productList',
-                element: <ProductList></ProductList>
-
+                element: <ProductList></ProductList>,
+                loader: productListLoader
             },
         ]
     }
