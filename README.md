@@ -11,6 +11,15 @@
 Add Products
 Products list: including the update and delete facility.
 
+## technologies implemeted 
+1. React,
+2. Tailwind CSS,
+3. Javascript,
+4. Axios,
+5. Sweetalert,
+6. Route Loaders approach,
+7. React icons
+
 ## Installation Steps:
 1. Clone the repository:
 2. git clone https://github.com/hasibhu/nexBellJobTask.git
