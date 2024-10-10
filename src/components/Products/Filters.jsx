@@ -11,7 +11,9 @@ const Filters = () => {
     
     // Initialize search params
     const [searchParams, setSearchParams] = useSearchParams();
-    const [search, setSearch]= useState('')
+
+    const [search, setSearch] = useState('')
+    
     // Add "all" as the default option for category and brand selection
     const categoryOptions = ['all', ...categories];
     const brandOptions = ['all', ...brands];
@@ -43,6 +45,7 @@ const Filters = () => {
         });
     };
 
+    
     // Handle sort change in real-time
     const searchOnChange = (e) => {
         const newSearch = e.target.value;
