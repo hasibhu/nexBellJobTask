@@ -12,11 +12,11 @@ Add Products
 Products list: including the update and delete facility.
 
 ## Installation Steps:
-Clone the repository:
-git clone https://github.com/hasibhu/nexBellJobTask.git
-cd nexBellJobTask
-npm i
-npm run dev
+1. Clone the repository:
+2. git clone https://github.com/hasibhu/nexBellJobTask.git
+3. cd nexBellJobTask
+4. npm i
+4. npm run dev
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
