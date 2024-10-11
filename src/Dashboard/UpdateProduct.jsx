@@ -126,7 +126,7 @@ const UpdateProduct = () => {
                 <div >
                     <h1 className="pb-3 font-bold">Dimension: </h1> 
 
-                    <div className="flex flex-row justify-center items-center gap-3">
+                    <div className="lg:flex flex-row justify-center items-center gap-3">
                         <div className="mb-4">
                         <label className="block mb-2 ">Depth</label>
                         <input
